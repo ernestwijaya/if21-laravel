@@ -5,5 +5,5 @@
     {{ $item->nama}}
     {{ $item->prodi->nama}}
     {{ $item->prodi->fakultas->nama}}
-    <br />
+    <brp />
 @endforeach
