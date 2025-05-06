@@ -15,16 +15,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('prodi', function (Blueprint $table) {
-            $table->uuid(column: 'id');
-            $table->primary(columns: 'id');
-            $table->string(column: 'nama', length: 30);
-            $table->char(column: 'singkatan', length: 2);
-            $table->string(column: 'kaprodi', length: 30);
-            $table->string(column: 'sekretaris', length: 30);
-            $table->uuid(column: 'fakultas_id');
-            $table->foreign(columns: 'fakultas_id')
-            ->References(columns: 'id')->on(table: 'fakultas')
-            ->onDelete(action: 'restrict')->onUpdate(action: 'restrict');
+            $table->uuid( 'id');
+            $table->primary( 'id');
+            $table->string( 'nama',  30);
+            $table->char( 'singkatan', 2);
+            $table->string( 'kaprodi', 30);
+            $table->string( 'sekretaris', 30);
+            $table->uuid( 'fakultas_id');
+            $table->foreign( 'fakultas_id')
+            ->references( 'id')->on( 'fakultas')
+            ->onDelete( 'restrict')->onUpdate( 'restrict');
             $table->timestamps();
         });
     }
