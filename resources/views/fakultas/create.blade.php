@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'fakultas')
+@section('title', 'Fakultas')
 @section('content')
 
     <!--begin::Row-->
@@ -27,13 +27,13 @@
                       </div>
 
                       <div class="mb-3">
-                        <label for="nama_dekan" class="form-label">Nama Dekan </label>
-                        <input type="text" class="form-control" name="nama_dekan">
+                        <label for="nama_dekan" class="form-label">Nama Kaprodi </label>
+                        <input type="text" class="form-control" name="kaprodi">
                       </div>
 
                       <div class="mb-3">
-                        <label for="nama_wadek" class="form-label">Nama Wakil Dekan</label>
-                        <input type="text" class="form-control" name="nama_wadek">
+                        <label for="nama_wadek" class="form-label">Sekretaris</label>
+                        <input type="text" class="form-control" name="sekretaris">
                       </div>
                     </div>
                     <!--end::Body-->

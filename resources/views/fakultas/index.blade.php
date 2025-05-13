@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'fakultas')
+@section('title', 'Fakultas')
 @section('content')
 
         <!--begin::Row-->
