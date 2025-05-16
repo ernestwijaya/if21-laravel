@@ -35,6 +35,12 @@
                         <label for="nama_wadek" class="form-label">Sekretaris</label>
                         <input type="text" class="form-control" name="sekretaris">
                       </div>
+
+                      <select name="fakultas_id" class="form-control">
+                        @foreach ($fakultas as $item)
+                        <option value="{{  $item->id }}">{{  $item->nama }}</option>
+                        @endforeach
+                      </select>
                     </div>
                     <!--end::Body-->
                     <!--begin::Footer-->
