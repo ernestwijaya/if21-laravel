@@ -1,39 +1,34 @@
 @extends('main')
 
-@section('title', 'Fakultas')
+@section('title', 'Program Studi')
 @section('content')
 
     <!--begin::Row-->
         <div class="row">
             <div class="col-12">
-                {{-- Form tambah fakultas --}}
+                {{-- Form tambah prodi --}}
                 <div class="card card-primary card-outline mb-4">
                   <!--begin::Header-->
                   <div class="card-header"><div class="card-title">Quick Example</div></div>
                   <!--end::Header-->
                   <!--begin::Form-->
-                  <form action="{{ route('fakultas.store') }}" method="POST">
+                  <form action="{{ route('prodi.store') }}" method="POST">
                     @csrf
                     <!--begin::Body-->
                     <div class="card-body">
                       <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Fakultas </label>
+                        <label for="nama" class="form-label">Nama Prodi </label>
                         <input type="text" class="form-control" name="nama">
                       </div>
 
                       <div class="mb-3">
-                        <label for="singkatan" class="form-label">Singkatan </label>
-                        <input type="text" class="form-control" name="singkatan">
+                        <label for="kaprodi" class="form-label">Kaprodi </label>
+                        <input type="text" class="form-control" name="kaprodi">
                       </div>
 
                       <div class="mb-3">
-                        <label for="nama_dekan" class="form-label">Nama Dekan </label>
-                        <input type="text" class="form-control" name="nama_dekan">
-                      </div>
-
-                      <div class="mb-3">
-                        <label for="nama_wadek" class="form-label">Nama Wakil Dekan</label>
-                        <input type="text" class="form-control" name="nama_wadek">
+                        <label for="nama_fakultas" class="form-label">Nama Fakultas </label>
+                        <input type="text" class="form-control" name="nama_fakultas">
                       </div>
                     </div>
                     <!--end::Body-->

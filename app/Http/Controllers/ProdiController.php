@@ -22,7 +22,7 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        //
+        return view('prodi.create');
     }
 
     /**
@@ -30,7 +30,12 @@ class ProdiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validasi input form
+        $input = $request->validate([
+            'nama' => 'required|unique:fakultas',
+            'kaprodi' => 'required',
+            'nama_fakultas' => 'required'
+        ]);
     }
 
     /**

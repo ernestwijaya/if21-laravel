@@ -311,21 +311,21 @@
               </li>
 
               <li class="nav-item">
-                <a class='nav-link' href='{{ url('fakultas.index') }}'>
+                <a class='nav-link' href='{{ url('fakultas') }}'>
                   <i class="nav-icon bi bi-building"></i>
                   <p>Fakultas</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class='nav-link' href='{{ url('prodi.index') }}'>
+                <a class='nav-link' href='{{ route('prodi.index') }}'>
                   <i class="nav-icon bi bi-microsoft"></i>
                   <p>Program Studi</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class='nav-link' href='{{ url('mahasiswa.index') }}'>
+                <a class='nav-link' href='{{ url('mahasiswa') }}'>
                   <i class="nav-icon bi bi-bucket"></i>
                   <p>Mahasiswa</p>
                 </a>
