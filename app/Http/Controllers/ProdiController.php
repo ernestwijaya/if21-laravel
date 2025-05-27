@@ -12,7 +12,8 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        $prodi = Prodi::all(); // SELECT * from prodi
+        
+        $prodi = Prodi::all();
         return view('prodi.index', compact('prodi'));
     }
 
@@ -21,7 +22,7 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        //
+        return view('prodi.create');
     }
 
     /**
@@ -29,7 +30,12 @@ class ProdiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validasi input form
+        $input = $request->validate([
+            'nama' => 'required|unique:fakultas',
+            'kaprodi' => 'required',
+            'nama_fakultas' => 'required'
+        ]);
     }
 
     /**

@@ -21,7 +21,10 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        //
+        $prodi = Prodi::all();
+        return view ('mahasiswa.create',
+        compact
+        ('prodi'));
     }
 
     /**
@@ -29,7 +32,15 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->validate([
+                'nama' => 'required',
+                'npm' => 'required|unique:mahasiswas',
+                'tempat_lahir' => 'required',
+                'tanggal_lahir' => 'required|date',
+                'jk' => 'required',
+                'asal_sma' => 'required',
+                'foto' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]); 
     }
 
     /**

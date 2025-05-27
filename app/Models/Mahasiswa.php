@@ -8,7 +8,7 @@ class Mahasiswa extends Model
 {
     protected $table = 'mahasiswas';
 
-    public function prodi() {
-        return $this->belongsTo(Prodi::class, 'prodi_id', 'id');
+    public function prodi(){
+        return $this->belongsTo(Prodi::class, 'prodi_id','id');
     }
 }
